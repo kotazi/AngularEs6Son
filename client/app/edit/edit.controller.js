@@ -1,38 +1,45 @@
-addEdit.controller('EditController', function($state, $stateParams, BeanService, RegionsService) {
+export default class EditController {
 
-  var edit = this;
-  edit.regions = [];
+  constructor($state, $stateParams, BeanService, RegionsService) {
 
-  BeanService.get({
-      id: $stateParams.id
-    })
-    .$promise
-    .then(function(data) {
-      data.importDate = data.importDate && new Date(data.importDate);
-      edit.bean = data;
-    });
+    this.$stateParams = $stateParams;
+    this.BeanService = BeanService;
+    this.RegionsService = RegionsService;
 
-  RegionsService.query()
-    .$promise
-    .then(function(data) {
-      edit.regions = data;
-    });
+    this.region = [];
+    this.bean = {};
 
-  edit.update = function() {
+    this.BeanService.get({
+        id: $stateParams.id
+      })
+      .$promise
+      .then((data) => {
+        data.importDate = data.importDate && new Date(data.importDate);
+        this.bean = data;
+      });
+
+    this.RegionsService.query()
+      .$promise
+      .then((data) => {
+        this.regions = data;
+      });
+  }
+
+  update() {
     var param = {
-      brand: edit.bean.brand,
-      amount: edit.bean.amount,
-      importDate: edit.bean.importDate && edit.bean.importDate.toISOString(),
-      region: edit.bean.region
+      brand: this.bean.brand,
+      amount: this.bean.amount,
+      importDate: this.bean.importDate && this.bean.importDate.toISOString(),
+      region: this.bean.region
     };
 
-    BeanService.update({
-        id: $stateParams.id
+    this.BeanService.update({
+        id: this.$stateParams.id
       }, param)
       .$promise
-      .then(function(data) {
-        $state.go('app.root.list');
+      .then((data) => {
+        this.$state.go('app.root.list');
       });
 
   };
-});
+}
