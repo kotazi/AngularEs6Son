@@ -1,11 +1,17 @@
-var beansServie = angular.module('Es6SonApp.services');
+export default class BeanService {
 
-beansServie.factory('BeanService', function($resource) {
-  return $resource('http://localhost:8000/api/beans/:id', {
-    id: '@id'
-  }, {
-    update: {
-      method: 'PUT'
-    }
-  });
-});
+  constructor($resource) {
+    this.$resource = $resource;
+  }
+
+  create() {
+    return this.$resource('http://localhost:8000/api/beans/:id', {
+      id: '@id'
+    }, {
+      update: {
+        method: 'PUT'
+      }
+    });
+  }
+
+}
