@@ -13,12 +13,7 @@
     <div ng-repeat="bean in list.beans">
       <div class="list-group-item">
         <div class="row-picture">
-          <img class="circle" src="/images/18.jpg" ng-show="bean.region === 1">
-          <img class="circle" src="/images/30.jpg" ng-show="bean.region === 2">
-          <img class="circle" src="/images/35.jpg" ng-show="bean.region === 3">
-          <img class="circle" src="/images/47.jpg" ng-show="bean.region === 4">
-          <img class="circle" src="/images/49.jpg" ng-show="bean.region === 5">
-          <img class="circle" src="/images/79.jpg" ng-show="bean.region === 6">
+          <img class="circle" ng-src="{{bean.region | beanRegion}}">
         </div>
         <div class="row-content">
           <p class="list-group-item-text">{{bean.importDate | date:'yyyy-MM-dd'}}</p>
