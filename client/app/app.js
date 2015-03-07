@@ -1,14 +1,3 @@
-import angular from 'angular';
-import 'angular-ui-router';
-
-import './edit/index';
-import './edit/edit.controller';
-
-import './add/index';
-import './add/add.controller';
-
-import './list/index';
-import './list/list.controller';
 // ここにひたすらAngularJSのコードを書いて行く
 var app = angular.module('Es6SonApp', ['ui.router', 'Es6SonApp.edit', 'Es6SonApp.add', 'Es6SonApp.list']);
 
