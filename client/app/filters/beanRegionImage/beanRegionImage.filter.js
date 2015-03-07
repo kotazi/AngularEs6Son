@@ -1,7 +1,8 @@
 var app = angular.module('Es6SonApp.filters');
 
-app.filter('beanRegion', function($http) {
+app.filter('beanRegionImage', function($http, sharingState) {
   var region = [];
+
   $http.get('http://localhost:8000/api/regions')
     .success(function(data) {
       region = data;

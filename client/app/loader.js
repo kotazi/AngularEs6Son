@@ -16,7 +16,8 @@ import './filters/regionName/regionName.filter';
 import './filters/beanRegionImage/beanRegionImage.filter';
 
 import './services/index';
-import './services/beans.service';
+import './services/beans/beans.service';
+import './services/sharingState/sharingState.service';
 
 import './app';
 
