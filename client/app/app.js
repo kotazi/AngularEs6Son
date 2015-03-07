@@ -1,11 +1,11 @@
 import angular from 'angular';
 import 'angular-ui-router';
 
-import './edit/index'
-import './edit/edit.controller'
+import './edit/index';
+import './edit/edit.controller';
 
-import './add/index'
-import './add/add.controller'
+import './add/index';
+import './add/add.controller';
 
 
 // ここにひたすらAngularJSのコードを書いて行く
