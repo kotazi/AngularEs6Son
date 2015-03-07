@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'angular-ui-router';
+import 'angular-resource';
 
 import './edit/index';
 import './edit/edit.controller';
@@ -9,8 +10,9 @@ import './add/add.controller';
 
 import './list/index';
 import './list/list.controller';
+
 // ここにひたすらAngularJSのコードを書いて行く
-var app = angular.module('Es6SonApp', ['ui.router', 'Es6SonApp.edit', 'Es6SonApp.add', 'Es6SonApp.list']);
+var app = angular.module('Es6SonApp', ['ui.router', 'ngResource', 'Es6SonApp.edit', 'Es6SonApp.add', 'Es6SonApp.list']);
 
 app.config(function($locationProvider, $httpProvider, $urlRouterProvider, $stateProvider) {
 
