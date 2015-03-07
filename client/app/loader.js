@@ -1,5 +1,6 @@
 import angular from 'angular';
 import 'angular-ui-router';
+import 'angular-resource';
 
 import './edit/index';
 import './edit/edit.controller';
