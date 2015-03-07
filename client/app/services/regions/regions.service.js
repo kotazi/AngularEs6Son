@@ -1,5 +1,11 @@
-var app = angular.module('Es6SonApp.services');
+export default class RegionsService {
 
-app.factory('RegionsService', function($resource) {
-  return $resource('http://localhost:8000/api/regions');
-});
+  constructor($resource) {
+    this.$resource = $resource;
+  }
+
+  create() {
+    return this.$resource('http://localhost:8000/api/regions');
+  }
+
+}
