@@ -1,13 +1,19 @@
-appAdd.controller('AddController', function($state, $http, RegionsService) {
-  var add = this;
-  add.regions = [];
+export default class AddController {
+  constructor($state, $http, RegionsService) {
+    this.$state = $state;
+    this.$http = $http;
+    this.RegionsService = RegionsService;
 
-  // TODO: 書き換え
-  $http.get('http://localhost:8000/api/regions')
-  .success(function(data) {
-     add.regions = data;
-  });
-  add.register = function() {
+    this.regions = [];
+
+    this.RegionsService.query()
+      .$promise
+      .then((data) => {
+        this.regions = data;
+      });
+  }
+
+  register() {
     $http.post('http://localhost:8000/api/beans', {
       brand: add.bean.brand,
       amount: add.bean.amount,
@@ -17,4 +23,5 @@ appAdd.controller('AddController', function($state, $http, RegionsService) {
       $state.go('app.root.list');
     });
   };
-});
+
+}

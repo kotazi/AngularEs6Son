@@ -1,5 +1,9 @@
+import AddController from './add.controller';
+
 // ここにひたすらAngularJSのコードを書いて行く
 var appAdd = angular.module('Es6SonApp.add', ['ui.router']);
+
+app.controller('AddController' , ['$state', '$http', 'RegionsService', AddController])
 
 appAdd.config(function($stateProvider) {
 
