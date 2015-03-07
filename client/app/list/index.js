@@ -1,7 +1,7 @@
 // ここにひたすらAngularJSのコードを書いて行く
 var addList = angular.module('Es6SonApp.list', ['ui.router']);
 
-addList.config(function($stateProvider) {
+addList.config(function($stateProvider, resouceList) {
 
   $stateProvider.state('app.root.list', {
       url: '^/list',
@@ -13,5 +13,4 @@ addList.config(function($stateProvider) {
         }
       }
     });
-
 });

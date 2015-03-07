@@ -14,7 +14,10 @@ import './list/list.controller';
 import './filters/index';
 import './filters/regionName/regionName.filter';
 
-import './app'
+import './services/index';
+import './services/beans.service';
+
+import './app';
 
 import 'bootstrap/css/bootstrap.css!';
 import 'FezVrasta/bootstrap-material-design/dist/css/material-wfont.css!';

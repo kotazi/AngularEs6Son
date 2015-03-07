@@ -13,6 +13,6 @@ appAdd.config(function($stateProvider) {
         controller: 'AddController'
       }
     }
-  })
+  });
 
 });
