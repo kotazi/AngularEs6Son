@@ -1,5 +1,5 @@
 // ここにひたすらAngularJSのコードを書いて行く
-var app = angular.module('Es6SonApp', ['ui.router', 'ngResource', 'Es6SonApp.edit', 'Es6SonApp.add', 'Es6SonApp.list']);
+var app = angular.module('Es6SonApp', ['ui.router', 'ngResource', 'Es6SonApp.edit', 'Es6SonApp.add', 'Es6SonApp.list', 'Es6SonApp.filters']);
 
 app.config(function($locationProvider, $httpProvider, $urlRouterProvider, $stateProvider) {
 

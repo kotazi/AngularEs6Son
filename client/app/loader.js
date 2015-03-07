@@ -11,6 +11,9 @@ import './add/add.controller';
 import './list/index';
 import './list/list.controller';
 
+import './filters/index';
+import './filters/regionName/regionName.filter';
+
 import './app'
 
 import 'bootstrap/css/bootstrap.css!';
