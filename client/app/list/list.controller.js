@@ -1,5 +1,5 @@
 
-import '../services/lindex';
+import '../services/index';
 
 addList.controller('ListController', function($http) {
   var list = this;
