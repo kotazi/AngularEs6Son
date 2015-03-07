@@ -1,9 +1,12 @@
 appAdd.controller('AddController', function($state, $http, RegionsService) {
   var add = this;
   add.regions = [];
-  RegionsService().success(function(data) {
-      add.regions = data;
-    });
+
+  // TODO: 書き換え
+  $http.get('http://localhost:8000/api/regions')
+  .success(function(data) {
+     add.regions = data;
+  });
   add.register = function() {
     $http.post('http://localhost:8000/api/beans', {
       brand: add.bean.brand,
