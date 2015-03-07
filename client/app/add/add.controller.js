@@ -1,8 +1,7 @@
-appAdd.controller('AddController', function($state, $http) {
+appAdd.controller('AddController', function($state, $http, RegionsService) {
   var add = this;
   add.regions = [];
-  $http.get('http://localhost:8000/api/regions')
-    .success(function(data) {
+  RegionsService().success(function(data) {
       add.regions = data;
     });
   add.register = function() {
