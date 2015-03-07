@@ -18,7 +18,6 @@ import './filters/beanRegionImage/beanRegionImage.filter';
 import './services/index';
 import './services/beans/beans.service';
 import './services/regions/regions.service';
-import './services/sharingState/sharingState.service';
 
 import './components/index';
 import './components/amountLabel/amountLabel.directive';
