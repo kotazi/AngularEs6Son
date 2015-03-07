@@ -4,8 +4,12 @@ import 'angular-ui-router';
 import './edit/index'
 import './edit/edit.controller'
 
+import './add/index'
+import './add/add.controller'
+
+
 // ここにひたすらAngularJSのコードを書いて行く
-var app = angular.module('Es6SonApp', ['ui.router', 'Es6SonApp.edit']);
+var app = angular.module('Es6SonApp', ['ui.router', 'Es6SonApp.edit', 'Es6SonApp.add']);
 
 app.config(function($locationProvider, $httpProvider, $urlRouterProvider, $stateProvider) {
 
