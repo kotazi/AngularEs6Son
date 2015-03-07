@@ -1,11 +1,13 @@
 import angular from 'angular';
 import 'angular-ui-router';
 
-import './edit/index'
-import './edit/edit.controller'
+import './edit/index';
+import './edit/edit.controller';
 
+import './list/index';
+import './list/list.controller';
 // ここにひたすらAngularJSのコードを書いて行く
-var app = angular.module('Es6SonApp', ['ui.router', 'Es6SonApp.edit']);
+var app = angular.module('Es6SonApp', ['ui.router', 'Es6SonApp.edit', 'Es6SonApp.list']);
 
 app.config(function($locationProvider, $httpProvider, $urlRouterProvider, $stateProvider) {
 
