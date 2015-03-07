@@ -1,6 +1,3 @@
-
-import '../services/index';
-
 addList.controller('ListController', function($http) {
   var list = this;
   $http.get('http://localhost:8000/api/beans')
