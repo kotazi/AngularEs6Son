@@ -20,11 +20,7 @@
           <h4 class="list-group-item-heading">{{bean.brand}}</h4>
           <p class="list-group-item-text">
             <span>{{bean.region | regionName}}</span>
-            <span ng-class="{
-              'text-info': bean.amount > 1000,
-              'text-success': bean.amount <= 1000 && bean.amount > 500,
-              'text-danger': bean.amount <= 500
-            }">{{bean.amount}} t</span>
+            <span amount-label data-amount="bean.amount"></span>
           </p>
           <div>
             <a ui-sref="app.root.edit({id: bean.id })" class="btn btn-primary btn-raised">編集</a>

@@ -18,6 +18,9 @@ import './filters/beanRegionImage/beanRegionImage.filter';
 import './services/index';
 import './services/beans.service';
 
+import './components/index';
+import './components/amountLabel/amountLabel.directive';
+
 import './app';
 
 import 'bootstrap/css/bootstrap.css!';
